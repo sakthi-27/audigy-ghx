@@ -1,0 +1,343 @@
+/***** Frontend CSS for audigy ghx plugin ****/
+
+.hearing_loss_result{
+    text-align:center;
+}
+
+.hearing_loss_result .flex-container {
+  display: flex;
+}
+.hearing_loss_result .flex-container .left-ear{
+    flex: 50%;
+}
+.hearing_loss_result .flex-container .right-ear{
+    flex: 50%;
+}
+.hearing_loss_result .hl_head{
+    margin-bottom:50px;
+}
+.hearing_loss_result .flex-container h3{
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+}
+.hearing_loss_result .flex-container p{
+    margin-bottom: 0px;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 26px;
+}
+.progress_ear_bar{
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100px;
+}
+.progress_ear_bar .progress_label{
+    position: absolute;
+    width: 100%;
+    height: 44px;
+}
+.progress_ear_bar .progress_label p.label.left{
+    width: 50%;
+    left: 0;
+    position: absolute;
+    font-weight: 500;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    line-height: 22px;
+}
+.progress_ear_bar .progress_label p.label.right{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    line-height: 22px;
+    text-align: right;
+}
+.progress_ear_bar .vertical_bar{
+    width: 100%;
+    border-radius: 50px;
+    border: 4px solid #116DB1;
+    position:absolute;
+    left: 0;
+    height: 49px;
+    top: 41px;
+    padding: 0px;
+    z-index: 99;
+
+}
+.progress_ear_bar .vertical_bar span{
+    height: 43px;
+    display: block;
+    width: 4px;
+    background: #116DB1;
+    position: absolute;
+    top:-1px;
+}
+.progress_ear_bar .vertical_bar span.one{
+    left: calc( 25% - 2.5px );
+}
+.progress_ear_bar .vertical_bar span.two{
+    left: calc( 50% - 2.5px );
+}
+.progress_ear_bar .vertical_bar span.three{
+    left: calc( 75% - 2.5px );
+}
+.progress_ear_bar .progress{
+    width: 100%;
+    height: 49px;
+    max-width: 100%;
+    padding: 0px;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    border-radius: 25px;
+   background-color:transparent;
+}
+.progress_ear_bar .progress .progress-bar{
+    background:#7EBDED; 
+}
+.providers_list{
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+}
+.providers_list .provider{
+    border: #0085D8 solid 1px;
+    border-radius: 15px;
+    flex-basis: 33.33%;
+}
+.providers_list .provider .text-content{
+    color: #FFFFFF;
+    padding: 32px;
+}
+.providers_list .provider .text-content span{
+   display: block;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: 30px;
+}
+.providers_list .provider .rev-star{
+    margin-bottom: 25px;
+}
+
+.provider-btn{
+    margin-top: 30px;
+}
+.find-providers{
+    display: none;
+}
+.providers_list + .bottom-btn .view-all-providers{
+    display: block;
+    width: 235px;
+    margin: 50px auto 0;
+    background-color: #C6D697 !important;
+    border-color: #C6D697 !important;
+    text-decoration: none;
+    color: #29313C; 
+}
+.providers-nearby .providers-count{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 39px;
+    height: 70px;
+}
+.providers-nearby .providers-count .location-finder-banner #why-edit-form{
+    margin-top:0px !important;
+}
+.providers-nearby .providers-count a{
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    font-size: 32px;
+    color: #A397F4;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+}
+.providers-nearby .providers-count a.btn-edit{
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    color: #A397F4;
+    font-size: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.providers-nearby .providers-count a:before{
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    border-bottom: 1px solid #A397F4;
+    width: 100%;
+}
+/*.providers_list .provider a {
+    background-color: transparent !important;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    padding: unset;
+    text-align: left;
+    margin-top: 25px;
+    font-weight: 600;
+    color: #a397f4;
+    font-size: 20px;
+    text-decoration: none;
+}*/
+.providers_list .provider .text-content a span{
+    background-color: transparent !important;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    padding: unset;
+    text-align: left;
+    color: #6548C6;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+}
+.providers_list .provider .text-content span i:before{
+        background: #6548C6;
+}
+.providers_list .provider img{ 
+    width: 100%;
+    height: calc(200px + 5vw);
+}
+.providers-nearby .location-finder-banner .c-search button{
+    line-height: 1;
+}
+/*.providers-nearby #why-edit-form {
+    max-width: 460px;
+    margin: 24px auto 0;
+    width: 100%;
+}*/
+.providers-nearby .bottom-btn .view-all-providers:hover{
+    background-color: #fff !important;
+    color: #29313C !important;
+}
+.providers-nearby .bottom-btn a.view-all-providers:hover:after{
+   background-color: #29313C !important;
+}
+.providers_list .provider .text-content a span i:after{
+    background:#6548C6 !important;
+}
+.providers_list .provider .text-content a span i{
+    margin-top: -4px;
+    margin-left: 10px;
+}
+#lp-leads-form .form-button button{
+    color: #29313e;
+    background-color: #c5d697;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    padding: 5.5px 35px;
+    border: 4px solid;
+    border-radius: 50px;
+    border-color: #C5D697 !important;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+#lp-leads-form .form-button button i.icon{
+    width: 11.95px;
+    height: 10.45px;
+    content: '';
+    display: inline-block;
+    transition: right 0.6s;
+    right: -10px;
+    position: relative;
+    top: -12px;
+}
+#lp-leads-form .form-button button:hover{
+    background-color: #FFFFFF !important;
+}
+#lp-leads-form .form-button button:hover i.icon{
+    right: -15px;
+}
+body #lp-leads-form button[disabled="disabled"],body #lp-leads-form button[disabled="disabled"]:hover{
+    background-color:rgba(197,214,151,1) !important;
+    border-color:none !important;
+    opacity: 0.4;
+}
+#lp-leads-form button[disabled="disabled"]:hover:after{
+    right: -10px !important;
+}
+.comp-heading p span {
+    width: 124px !important;
+}
+.comp-heading .see-map{
+    margin-top:10px !important;
+}
+.comp-heading p{
+    margin-bottom: 0px !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input.wpcf7-number::-webkit-outer-spin-button,
+input.wpcf7-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number].wpcf7-number {
+  -moz-appearance: textfield;
+}
+#lp-leads-form .wpcf7-response-output {
+    display: none !important;
+}
+#c-form-response p {
+    color: #fff;
+    text-align: center;
+}
+#c-form-response .modal-content{
+    border-radius: 0;
+    background: #29313E;
+    color: #FFFFFF;
+    padding: 45px 52px 27px 40px;
+    border: #6548C6 solid 4px !important;
+    min-height: 380px;
+}
+#c-form-response .modal-body{
+    padding: 0;
+}
+#c-form-response .modal-footer{
+    border: 0;
+    justify-content: center;
+}
+#c-form-response .modal-footer .btn-secondary{
+    border-color: #C5D697 !important;
+    background-color: #C5D697;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    padding: 7px 35px;
+    border: 4px solid;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+/*.providers-nearby .use-my-loc-home{
+    max-width: 460px;
+    width: 100%;
+    margin: 20px auto 0;
+    display: block;
+}*/
+.providers-nearby .location-finder-banner.why-page{
+    display: block;
+}
+.providers-nearby h2 {
+  text-align: center;
+  color: #fff;
+}
+.location-finder-banner .c-search button{
+    line-height: 1;
+}
+a.use-my-loc:hover, a.use-my-loc-home:hover{
+    text-decoration: underline;
+}
+.location-finder-banner .c-search button .icon{
+    top: -1px !important;
+}
+.section-with-sidebar-form .s-content > .s-details .company-wrapper .company-details > .comp-d-1 .comp-heading .icon.left{
+    margin-bottom: -9px;
+}
