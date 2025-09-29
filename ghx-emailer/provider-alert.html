@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provider Alert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;1,300&family=Urbanist:ital,wght@0,300;1,300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    @media only screen and (max-width: 480px) {
+      table {
+          width: 100% !important
+      }
+
+      table tr.cover {
+          height: 250px!important;
+          background-position: center!important
+      }
+
+      table tr.cover .heading {
+          background: linear-gradient(to left,transparent,#29313e 100%)!important
+      }
+
+      table tr.cover .heading h1 {
+          width: 100%!important
+      }
+
+      table tr.footer,
+      table tr.footer ul.links .link a,
+      table tr.footer ul.links .sep a {
+          font-size: .75em!important
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Aleo', serif; line-height: 1.8; font-size: 1.35em; font-weight: 300;">
+  <table style="width: 640px; border-collapse: collapse;" width="640">
+    <thead>
+      <tr>
+        <th style="text-align: left; padding: 1em 1.5em;" align="left">
+          <img src="https://stghearingloss.wpengine.com/emailer/hearing_loss_logo.png"
+            alt="HearingLoss.com" style="width: 250px; vertical-align: middle;" width="250">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cover"
+        style="height: 280px; background-image: url('https://stghearingloss.wpengine.com/emailer/texting_phone_women.png'); background-size: cover; background-position: 30px -12px; background-repeat: no-repeat; background-origin: border-box; border-top: 10px solid #3c2a6a;"
+        background="https://stghearingloss.wpengine.com/emailer/texting_phone_women.png">
+        <td class="heading"
+          style="padding: 2em; vertical-align: middle; background: linear-gradient(to left, transparent, #29313e 60%);"
+          valign="middle">
+          <h1
+            style="float: left; color: #fff; font-weight: 300; width: 40%; text-align: center; line-height: 1.2; font-size: 1.75em; font-family: 'Urbanist', sans-serif; z-index: 10;">
+            Appointment requested!</h1>
+        </td>
+      </tr>
+      <tr class="content" style="background: #e1eaf3;">
+        <td style="padding: 2em; vertical-align: middle;" valign="middle">
+          <p>Dear ${firstName},</p>
+          <p>Great news! A prospect on HearingLoss.com is requesting a call to schedule an appointment:</p>
+          <p><strong> <a href="${link}" style="color: #6548c6;">Click here to view your prospect</a></strong></p>
+          <p class="spacer" style="margin-bottom: 3em;"></p>
+          <p>Sincerely, <br>
+            <em style="font-weight: 300;">The HearingLoss.com Team</em>
+          </p>
+        </td>
+      </tr>
+      <tr class="hl-banner" 
+      style="text-align: center; background: url('https://stghearingloss.wpengine.com/emailer/pattern_bg.png') repeat; background-size: 100%; background-position: 200% 0;"
+        align="center">
+        <td
+          style="vertical-align: middle; padding: 1em; background: linear-gradient(to right, #29313e 25%, transparent);"
+          valign="middle">
+          <img src="https://stghearingloss.wpengine.com/emailer/hearing_loss_logo_white.png" alt="HearingLoss.com"
+            style="width: 180px; vertical-align: middle;" width="180">
+        </td>
+      </tr>
+      <tr class="footer" style="background: #6548c5; color: #fff; text-align: center; font-size: 0.9em;" align="center">
+        <td style="padding: 2em; vertical-align: middle; padding-bottom: 3em;" valign="middle">
+          <p class="hl-info">
+            © 2022 HearingLoss.com
+            <br>
+            11201 NE 9th St. Vancouver, WA 98684
+          </p>
+          <ul class="links" style="list-style-type: none; padding: 0; margin-top: 2em; font-size: 0.85em;">
+            <li class="link" style="display: inline-block; padding: 0 4px;">
+              <a href="https://stghearingloss.wpengine.com/company/privacy-policy/" style="color: #fff;">Privacy
+                Policy</a>
+            </li>
+            <li class="sep" style="display: inline-block; padding: 0 4px;">|</li>
+            <li class="link" style="display: inline-block; padding: 0 4px;">
+              <a href="https://stghearingloss.wpengine.com/emailer/save-my-spot.html#" style="color: #fff;">Update
+                Preferences</a>
+            </li>
+            <li class="sep" style="display: inline-block; padding: 0 4px;">|</li>
+            <li class="link" style="display: inline-block; padding: 0 4px;">
+              <a href="https://stghearingloss.wpengine.com/emailer/save-my-spot.html#"
+                style="color: #fff;">Unsubscribe</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

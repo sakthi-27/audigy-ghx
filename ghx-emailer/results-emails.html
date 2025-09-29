@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results Emails</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;1,300&family=Urbanist:ital,wght@0,300;1,300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    .find_my_provider {
+    font-family: "Urbanist", sans-serif, Georgia, "Trebuche MS", Helvetica;
+    padding: 12.5px 35px;
+    border: 3px solid;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-color: #6548C6;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #6548C6 !important;
+    text-decoration: none;
+    transition: .3s ease;
+    background: #fff url(../wp-content/ghx-emailer/email_arrow.png) no-repeat;
+    background-position: 260px center;
+    
+    }
+    .find_my_provider:hover{
+      background:#6548C6 url(../wp-content/ghx-emailer/email_arrow_white.png) no-repeat;
+     background-position: 260px center;
+      color: #fff !important;
+    }
+    .hl-btn a:hover span img {
+        filter: brightness(0) invert(1);
+    }
+    @media only screen and (max-width: 580px) {
+      table {
+          width: 100% !important
+      }
+
+      table tr.cover {
+          background-position: center!important
+      }
+
+      table tr.cover .heading {
+          background: linear-gradient(to left,transparent,#29313e 100%)!important
+      }
+
+      table tr.cover .heading h1 {
+          width: 100%!important
+      }
+
+      table tr.footer,
+      table tr.footer ul.links .link a,
+      table tr.footer ul.links .sep a {
+          font-size: .75em!important
+      }
+    }
+
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+ 
+    .footer a{
+      color:#fff !important;
+    }
+  </style>
+   <meta name="color-scheme" content="light dark">
+   <meta name="supported-color-schemes" content="light dark">
+</head>
+
+<body style="font-family: 'Aleo', serif; line-height: 1.8; font-size: 1.35em; font-weight: 300;">
+  <table style="width: 640px; border-collapse: collapse;" width="640">
+    <thead>
+      <tr>
+        <th style="text-align: left; padding: 1em 1.5em;background:#29313e;
+        text-align: center;" align="center">
+                  <a href="https://hearingloss.com"><img src="{siteurl}/wp-content/ghx-emailer/hearing_loss_logo_white.png"
+                    alt="HearingLoss.com" style="width:250px; vertical-align: middle;" width="250" class="dark-mode-hide"></a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cover"
+      style="border-top: 10px solid #3c2a6a;background-color:#e1eaf3;">
+        <td class="heading"
+        style="padding: 0px; vertical-align: top;"
+        valign="middle">
+        <img src="{siteurl}/wp-content/ghx-emailer/hearing_results_header.png" style="width:100%;vertical-align: top;">
+        </td>
+      </tr>
+      <tr class="content" style="background: #e1eaf3;">
+        <td style="padding:10px 2em; vertical-align: middle;" valign="middle">
+          <p>Dear {FirstName},</p>
+          <p>Congratulations on completing the Guided Hearing Experience on HearingLoss.com. You can review your results at any time via this link:  <a href="{link}" style="color: #6548c6;">VIEW MY RESULTS</a>.</p>
+          <p>To help ensure your hearing concerns are addressed, and establish a baseline from which you can measure changes over time, we recommend you see a HearingLoss.com professional for an evaluation.</p>
+          <p>To learn more, find your local HearingLoss.com hearing care professional in our <a href="{siteurl}/find-a-hearing-professional/?zipcode={zipcode}" style="color: #6548c6;">directory</a> today!</p>
+          <p class="spacer" style="margin-bottom: 3em;"></p>
+          <p>Sincerely, <br> <em style="font-weight: 300;">The HearingLoss.com Team</em>
+          </p>
+        </td>
+      </tr>
+      <tr class="hl-btn" style="background: #e1eaf3;text-align: center;width:100%;">
+        <td>
+            <a class="find_my_provider" href="{siteurl}/find-a-hearing-professional/?zipcode={zipcode}">Find My Hearing Provider <span style="vertical-align: middle;margin-left: 5px;">
+        
+                </span></a>
+        </td>
+      </tr>
+      <tr class="hl-banner" 
+      style="text-align: center; background: url('{siteurl}/wp-content/ghx-emailer/pattern_bg.png') repeat; background-size: 100%; background-position: 200% 0;"
+        align="center">
+        <td style="vertical-align: middle; padding: 1em; background:#29313e;" valign="middle">
+          <img src="{siteurl}/wp-content/ghx-emailer/hearing_loss_logo_white.png" alt="HearingLoss.com"
+            style="width: 180px; vertical-align: middle;" width="180">
+        </td>
+      </tr>
+
+       <tr class="footer" style="background: #6548c5; color: #fff; text-align: center; font-size: 0.9em;" align="center">
+        <td style="padding: 2em; vertical-align: middle; padding-bottom: 3em;" valign="middle">
+          <p class="hl-info" style="color:#fff;">
+            © 2024 HearingLoss.com. All rights reserved.
+            <br>
+            <span style="color:#fff;">HearingLoss.com is a trademark of Audigy Group, LLC.<br>1201 SE Tech Center Dr, Ste 110, Vancouver, WA 98683</span>
+          </p>
+          <p class="links" style="text-align:center;display:inline-block;width:auto;margin: auto;list-style-type: none; padding: 0; margin-top: 2em; font-size: 0.85em;">
+            <span>
+              <a href="{siteurl}/company/privacy-policy/?utm_source=ghx_submission&utm_medium=email&utm_campaign=ghx_loved_one" style="color: #fff;">Privacy
+                Policy</a>
+            </span>
+            <span>|</span>
+            <span>
+              <a href="{unsubscribe_link}" style="color: #fff;">Unsubscribe</a>
+            </span>
+          </p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
