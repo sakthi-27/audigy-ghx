@@ -10,20 +10,19 @@ class AudigyWp {
 	public function create_user_meta($id, $data) {
 		//return add_user_meta($id, $meta_key, $data);
 		
-		    /*var_dump(json_encode($data));
-		    exit();*/
+		/*  var_dump(json_encode($data));
+	     exit();*/
 		global $wpdb;
 	
 		$table_name = $this->getTableName();
 		
-		$response = $wpdb->insert(
-			$table_name, 
-			array( 
-				'id' => $id, 
-				'userdata' => json_encode($data)
-			) 
+		$sql = $wpdb->prepare(
+			"INSERT INTO {$table_name} (id, userdata) VALUES (%d, %s)",
+			$id,
+			json_encode($data)
 		);
-		
+		$response = $wpdb->query($sql);
+
 	    return $response;
 	}
 	
@@ -32,13 +31,15 @@ class AudigyWp {
 		global $wpdb;
 		$retVal = [];
 		$table_name = $this->getTableName();
-	    $sql = "SELECT * FROM $table_name WHERE id = $id";
-		$result = $wpdb->get_results($sql);
 		
-		if(count($result) && !empty($result[0]->id)) {
+		$id      = isset($id) ? intval($id) : 0;
+		$sql     = $wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id);
+		$results = $wpdb->get_results($sql);
+		
+		if(count($results) && !empty($results[0]->id)) {
 			$retVal = [
 				"id" => $result[0]->id,
-				"userdata" => json_decode($result[0]->userdata)
+				"userdata" => json_decode($results[0]->userdata)
 			];
 		}
 		
@@ -61,8 +62,12 @@ class AudigyWp {
 		add_filter('wp_mail_content_type', function( $content_type ) {
             return 'text/html';
 		});
+
+		add_filter('wp_mail_from_name', function( $original_email_from ) {
+            return get_option( 'blogname' );
+		});
 		
-        $res = wp_mail( $to, $subject, $message );
+        $res = wp_mail( $to, $subject, $message, $headers );
         
         return [
         	"result" => $res,
@@ -70,4 +75,20 @@ class AudigyWp {
         	"subject" => $subject
         ];
 	}
+
+
+	 public function get_ghx_options() {
+		
+		if(wp_doing_ajax()) {
+			
+			$response = [
+				"plugin_url" => plugin_dir_url( __DIR__ ),
+			];
+			
+			wp_send_json($response);
+			wp_die();
+		}
+
+	 }
+
 }
